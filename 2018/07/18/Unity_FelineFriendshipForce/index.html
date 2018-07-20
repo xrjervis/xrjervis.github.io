@@ -12,18 +12,20 @@
     
         <meta name="keywords" content="UNITY" />
     
-    <meta name="description" content="Portfolio Site">
+    <meta name="description" content="Responsibility Create and maintain relevant production tasks on the scrum board related to my role. Make tasks for sprint and milestone. Work with faculty advisor and team to create technical directi">
 <meta name="keywords" content="UNITY">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Feline Friendship Force">
 <meta property="og:url" content="http://ruixie.site/2018/07/18/Unity_FelineFriendshipForce/index.html">
 <meta property="og:site_name" content="Rui &quot;Siri&quot; Xie">
-<meta property="og:description" content="Portfolio Site">
+<meta property="og:description" content="Responsibility Create and maintain relevant production tasks on the scrum board related to my role. Make tasks for sprint and milestone. Work with faculty advisor and team to create technical directi">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-07-19T23:06:55.728Z">
+<meta property="og:image" content="http://7xtifo.com1.z0.glb.clouddn.com/FFF_Trailer.gif">
+<meta property="og:updated_time" content="2018-07-20T00:07:28.157Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Feline Friendship Force">
-<meta name="twitter:description" content="Portfolio Site">
+<meta name="twitter:description" content="Responsibility Create and maintain relevant production tasks on the scrum board related to my role. Make tasks for sprint and milestone. Work with faculty advisor and team to create technical directi">
+<meta name="twitter:image" content="http://7xtifo.com1.z0.glb.clouddn.com/FFF_Trailer.gif">
     
 
     
@@ -183,14 +185,32 @@ ga('send', 'pageview');
         
         
         <div class="article-entry" itemprop="articleBody">
-            
+            <p><img src="/images/FFF_MainMenuScreen.png" alt="" width="700px" height="400px"></p>
+<h3 id="Responsibility"><a href="#Responsibility" class="headerlink" title="Responsibility"></a>Responsibility</h3><ul>
+<li>Create and maintain relevant production tasks on the scrum board related to my role.</li>
+<li>Make tasks for sprint and milestone.</li>
+<li>Work with faculty advisor and team to create technical direction.</li>
+<li>Participate in team presentations.</li>
+<li>Create and keep planning documents/sections current:  GDD &amp; Sprint Burn-down sections.</li>
+<li>Code game components and communicate technical design.</li>
+<li>Keep programming scrum board section current.</li>
+<li>Review and approve code before going into game.</li>
+<li>Make and iterate the Enemy AI.</li>
+<li>Approve UI implementation.</li>
+<li>Make daily builds.</li>
+</ul>
+<h3 id="Gameplay-Features"><a href="#Gameplay-Features" class="headerlink" title="Gameplay Features"></a>Gameplay Features</h3><h4 id="Movement"><a href="#Movement" class="headerlink" title="Movement"></a>Movement</h4><p>All the movement of the characters is controlled by player input. At the beginning of the game, GameController starts to listen to all events like OnNodeDown, OnNodeUp, and OnNodeDragHit. In MouseController script, the program detects player’s input every frame. Whenever player triggers an event, MouseController informs GameController through the EventManager to call the corresponding method.<br>NodeConnection indicates how nodes connect with each other. Players can re-pick the node when they keep pressing on the screen and can only move to the adjacent node.</p>
+<h4 id="Box"><a href="#Box" class="headerlink" title="Box"></a>Box</h4><p>Box element can hide cats from dogs. When the player moves the cat into a box, the cat disappears along with a green outline shader showing on the box, indicating that player can move the cat outside the box as well.<br>Dogs cannot see the cat inside the box, but they can move through the node with a box on it still.</p>
+<h4 id="Water"><a href="#Water" class="headerlink" title="Water"></a>Water</h4><p>Water is an obstacle which blocks the movement of both cats and dogs. Dogs cannot even see through the water. There is a pressure plate on another node which controls the water. Whenever there’s an object standing on it, no matter a cat or a dog, the water is off, which means the obstacle is gone.</p>
+<h4 id="Enemy-AI"><a href="#Enemy-AI" class="headerlink" title="Enemy AI"></a>Enemy AI</h4><p>Enemy AI conveyance is clear. Dogs can see through nodes connected in a straight line unless there are any obstacles. If the dog sees a cat, it turns to chase mode. If the dog cannot see a cat anymore, it turns to still mode with a question mark on its head.</p>
+
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="http://ruixie.site/2018/07/18/Unity_FelineFriendshipForce/" data-id="cjjt6urbd0005awhs21sjqu81" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://ruixie.site/2018/07/18/Unity_FelineFriendshipForce/" data-id="cjjt6zke8000024hse3bubzks" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -355,7 +375,7 @@ ga('send', 'pageview');
                             <a href="/2018/07/18/Unity_FelineFriendshipForce/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background-image:url(http://7xtifo.com1.z0.glb.clouddn.com/FFF_Trailer.gif)" alt="Feline Friendship Force" class="thumbnail-image"></span>
     
     
 </a>
