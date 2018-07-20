@@ -12,20 +12,20 @@
     
         <meta name="keywords" content="C++" />
     
-    <meta name="description" content="DFS Final PresentationA 2D data-driven game builder that can be used to author many 2D game types easily from XML data files. Property Tree generate, copy, delete recursively EntityDefinition load dat">
+    <meta name="description" content="A 2D data-driven game builder that can be used to author many 2D game types easily from XML data files. Overview Engine: Personal Engine Languages: C++, XML Dev Time: 8 weeks Code Repo: Github  Proper">
 <meta name="keywords" content="C++">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Data-Driven GameBuilder 2D">
 <meta property="og:url" content="http://ruixie.site/2018/07/16/DFS_GameBuilder/index.html">
 <meta property="og:site_name" content="Rui &quot;Siri&quot; Xie">
-<meta property="og:description" content="DFS Final PresentationA 2D data-driven game builder that can be used to author many 2D game types easily from XML data files. Property Tree generate, copy, delete recursively EntityDefinition load dat">
+<meta property="og:description" content="A 2D data-driven game builder that can be used to author many 2D game types easily from XML data files. Overview Engine: Personal Engine Languages: C++, XML Dev Time: 8 weeks Code Repo: Github  Proper">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://ruixie.site/images/map_generation.gif">
-<meta property="og:updated_time" content="2018-07-19T16:48:16.348Z">
+<meta property="og:image" content="http://ruixie.site/images/DFS_PropertyTree.png">
+<meta property="og:updated_time" content="2018-07-20T09:19:13.360Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Data-Driven GameBuilder 2D">
-<meta name="twitter:description" content="DFS Final PresentationA 2D data-driven game builder that can be used to author many 2D game types easily from XML data files. Property Tree generate, copy, delete recursively EntityDefinition load dat">
-<meta name="twitter:image" content="http://ruixie.site/images/map_generation.gif">
+<meta name="twitter:description" content="A 2D data-driven game builder that can be used to author many 2D game types easily from XML data files. Overview Engine: Personal Engine Languages: C++, XML Dev Time: 8 weeks Code Repo: Github  Proper">
+<meta name="twitter:image" content="http://ruixie.site/images/DFS_PropertyTree.png">
     
 
     
@@ -189,41 +189,58 @@ ga('send', 'pageview');
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h2 id="DFS-Final-Presentation"><a href="#DFS-Final-Presentation" class="headerlink" title="DFS Final Presentation"></a>DFS Final Presentation</h2><p>A 2D data-driven game builder that can be used to author many 2D game types easily from XML data files.</p>
-<h3 id="Property-Tree"><a href="#Property-Tree" class="headerlink" title="Property Tree"></a>Property Tree</h3><ul>
-<li>generate, copy, delete recursively</li>
-<li>EntityDefinition load data from XML</li>
-<li>When creating an entity, it holds a copy</li>
+            <p>A 2D data-driven game builder that can be used to author many 2D game types easily from XML data files.</p>
+<h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><ul>
+<li><strong>Engine</strong>: Personal Engine</li>
+<li><strong>Languages</strong>: C++, XML</li>
+<li><strong>Dev Time</strong>: 8 weeks</li>
+<li><strong>Code Repo</strong>: <a href="&quot;https://github.com/xrjervis/guildhall/tree/master/DFS/GameBuilder&quot;">Github</a></li>
 </ul>
-<h3 id="Definitions"><a href="#Definitions" class="headerlink" title="Definitions"></a>Definitions</h3><ul>
-<li>For registration</li>
-<li>Entity Definition</li>
-<li>Map Definition</li>
-<li>Tile Definition</li>
+<h3 id="Property-Tree"><a href="#Property-Tree" class="headerlink" title="Property Tree"></a>Property Tree</h3><p>Here is an example of an EntityDefinition XML node:<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">EntityDefinition</span></span></span><br><span class="line"><span class="tag">    <span class="attr">name</span>=<span class="string">"PlayerTank"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">spriteSheet</span>=<span class="string">"PlayerTank_1x1"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">spriteCoords</span>=<span class="string">"0,0"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">tags</span>=<span class="string">"canWalk,friend,player"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">collider</span>=<span class="string">"Disc2"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">size</span>=<span class="string">"1.5,1.5"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">health</span>=<span class="string">"10"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">speed</span>=<span class="string">"2"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Event</span> <span class="attr">type</span>=<span class="string">"MoveUp"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Command</span> <span class="attr">name</span>=<span class="string">"AddMovement"</span> <span class="attr">value</span>=<span class="string">"0.0,1.0"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Event</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Event</span> <span class="attr">type</span>=<span class="string">"MoveDown"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Command</span> <span class="attr">name</span>=<span class="string">"AddMovement"</span> <span class="attr">value</span>=<span class="string">"0.0,-1.0"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Event</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Event</span> <span class="attr">type</span>=<span class="string">"MoveLeft"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Command</span> <span class="attr">name</span>=<span class="string">"AddMovement"</span> <span class="attr">value</span>=<span class="string">"-1.0,0.0"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Event</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Event</span> <span class="attr">type</span>=<span class="string">"MoveRight"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Command</span> <span class="attr">name</span>=<span class="string">"AddMovement"</span> <span class="attr">value</span>=<span class="string">"1.0,0.0"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Event</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Event</span> <span class="attr">type</span>=<span class="string">"Shoot"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Command</span> <span class="attr">name</span>=<span class="string">"SpawnEntity"</span> <span class="attr">target</span>=<span class="string">"self"</span> <span class="attr">value</span>=<span class="string">"PlayerBullet"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Event</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Event</span> <span class="attr">type</span>=<span class="string">"Jump"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Command</span> <span class="attr">name</span>=<span class="string">"SetVelocity"</span> <span class="attr">value</span>=<span class="string">"0.0,5.0"</span> <span class="attr">setTimer</span>=<span class="string">"2.0"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Event</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">EntityDefinition</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><img src="/images/DFS_PropertyTree.png" alt="" width="700px"></p>
+<ul>
+<li>Generate, copy, delete recursively, no memory leaks!</li>
 </ul>
-<h3 id="GameConfig"><a href="#GameConfig" class="headerlink" title="GameConfig"></a>GameConfig</h3><ul>
-<li>global data</li>
-<li>resource loading</li>
-<li>Input binding</li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// PropertySet members</span></span><br><span class="line">StringId                                    m_id;</span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">vector</span>&lt;Property&gt;                       m_properties;</span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="built_in">std</span>::<span class="built_in">unique_ptr</span>&lt;PropertySet&gt;&gt;   m_children;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Constructor</span></span><br><span class="line">PropertySet::PropertySet(<span class="keyword">const</span> pugi::xml_node&amp; xmlNode) &#123;</span><br><span class="line">    m_id = CreateOrGetStringId(<span class="built_in">std</span>::<span class="built_in">string</span>(xmlNode.name()));</span><br><span class="line">    <span class="keyword">for</span> (pugi::xml_attribute attribute : xmlNode.attributes()) &#123;</span><br><span class="line">    	SetProperty(attribute.name(), attribute.as_string());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">size_t</span> nodeCount = <span class="built_in">std</span>::distance(xmlNode.children().begin(), xmlNode.children().end());</span><br><span class="line">    <span class="keyword">if</span> (nodeCount &gt; <span class="number">0</span>) &#123;</span><br><span class="line">    	<span class="keyword">for</span> (pugi::xml_node child : xmlNode.children()) &#123;</span><br><span class="line">    		AddChild(child);</span><br><span class="line">    	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>EntityDefinition loads data from XML. When we create an entity, it holds a copy</li>
 </ul>
-<h3 id="Runtime-Map-Reload"><a href="#Runtime-Map-Reload" class="headerlink" title="Runtime Map Reload"></a>Runtime Map Reload</h3><ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Copy Constructor</span></span><br><span class="line">PropertySet::PropertySet(<span class="keyword">const</span> PropertySet&amp; copy) &#123;</span><br><span class="line">    m_id = copy.m_id;</span><br><span class="line">    m_properties = copy.m_properties;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span>&amp; it : copy.m_children) &#123;</span><br><span class="line">    	m_children.emplace_back(<span class="built_in">std</span>::make_unique&lt;PropertySet&gt;(*it));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Property object holds the value as a string which can be parsed to the type I want</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Property</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	Property() = <span class="keyword">default</span>;</span><br><span class="line">	Property(<span class="keyword">const</span> <span class="built_in">std</span>::<span class="built_in">string</span>&amp; name, <span class="keyword">const</span> <span class="built_in">std</span>::<span class="built_in">string</span>&amp; val);</span><br><span class="line">	~Property() = <span class="keyword">default</span>;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">std</span>::<span class="function"><span class="built_in">string</span>     <span class="title">GetName</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line">	<span class="function">StringI         <span class="title">GetID</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line">	<span class="function"><span class="keyword">bool</span>            <span class="title">IsValid</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">bool</span>            <span class="title">AsBool</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line">	<span class="function"><span class="keyword">float</span>           <span class="title">AsFloat</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line">	<span class="function"><span class="keyword">int</span>             <span class="title">AsInt</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line">	<span class="function">Vector2         <span class="title">AsVec2</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line">	<span class="function">IntVector2      <span class="title">AsIntVec2</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line">	<span class="function">Rgba            <span class="title">AsRgba</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line">	<span class="function">Tags            <span class="title">AsTags</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line">	<span class="built_in">std</span>::<span class="function"><span class="built_in">string</span>     <span class="title">AsString</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line">	<span class="function"><span class="keyword">const</span> <span class="keyword">char</span>*     <span class="title">AsRawString</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line">	<span class="function">eEventType      <span class="title">AsEventType</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">void</span>            <span class="title">SetValue</span><span class="params">(<span class="keyword">const</span> <span class="built_in">std</span>::<span class="built_in">string</span>&amp; val)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	StringId        m_id;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">string</span>     m_value;</span><br><span class="line">	<span class="keyword">bool</span>            m_isVaild = <span class="literal">false</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="How-does-the-GameBuilder-work-with-data"><a href="#How-does-the-GameBuilder-work-with-data" class="headerlink" title="How does the GameBuilder work with data?"></a>How does the GameBuilder work with data?</h3><ul>
+<li><p>When the game starts</p>
+<ul>
+<li>Load 3 definition files: EntityDefinition, MapDefinition, TileDefinition</li>
+<li><p>Load GameConfig file which contains global data, resource path and input mapping</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">GameConfig</span></span></span><br><span class="line"><span class="tag">    <span class="attr">cameraHeight</span>=<span class="string">"12.0"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">cameraAspect</span>=<span class="string">"1.7778"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">cameraClamp</span>=<span class="string">"true"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">cameraFollowPlayers</span>=<span class="string">"false"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">gravity</span>=<span class="string">"0.0,0.0"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">startMap</span>=<span class="string">"Dungeon"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Resources</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">SpriteSheet</span> <span class="attr">name</span>=<span class="string">"Bat_8x6"</span> <span class="attr">filePath</span>=<span class="string">"Data/Images/Bat_8x6.png"</span> <span class="attr">layout</span>=<span class="string">"8,6"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">SpriteSheet</span> <span class="attr">name</span>=<span class="string">"Terrain_32x32"</span> <span class="attr">filePath</span>=<span class="string">"Data/Images/Terrain_32x32.png"</span> <span class="attr">layout</span>=<span class="string">"32,32"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">SpriteSheet</span> <span class="attr">name</span>=<span class="string">"PlayerTank_1x1"</span> <span class="attr">filePath</span>=<span class="string">"Data/Images/PlayerTank_1x1.png"</span> <span class="attr">layout</span>=<span class="string">"1,1"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">SpriteSheet</span> <span class="attr">name</span>=<span class="string">"EnemyTank_1x1"</span> <span class="attr">filePath</span>=<span class="string">"Data/Images/EnemyTank_1x1.png"</span> <span class="attr">layout</span>=<span class="string">"1,1"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">SpriteSheet</span> <span class="attr">name</span>=<span class="string">"Characters_12x53"</span> <span class="attr">filePath</span>=<span class="string">"Data/Images/KushnariovaCharacters_12x53.png"</span> <span class="attr">layout</span>=<span class="string">"12,53"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">SpriteSheet</span> <span class="attr">name</span>=<span class="string">"Bullet_1x1"</span> <span class="attr">filePath</span>=<span class="string">"Data/Images/Bullet_1x1.png"</span> <span class="attr">layout</span>=<span class="string">"1,1"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Resources</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Input</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">OnKeyDown</span> <span class="attr">key</span>=<span class="string">"W"</span> <span class="attr">event</span>=<span class="string">"MoveUp"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">OnKeyDown</span> <span class="attr">key</span>=<span class="string">"S"</span> <span class="attr">event</span>=<span class="string">"MoveDown"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">OnKeyDown</span> <span class="attr">key</span>=<span class="string">"A"</span> <span class="attr">event</span>=<span class="string">"MoveLeft"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">OnKeyDown</span> <span class="attr">key</span>=<span class="string">"D"</span> <span class="attr">event</span>=<span class="string">"MoveRight"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">OnKeyPressed</span> <span class="attr">key</span>=<span class="string">"Space"</span> <span class="attr">event</span>=<span class="string">"Shoot"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">OnKeyDown</span> <span class="attr">key</span>=<span class="string">"I"</span> <span class="attr">event</span>=<span class="string">"MoveUp2"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">OnKeyDown</span> <span class="attr">key</span>=<span class="string">"K"</span> <span class="attr">event</span>=<span class="string">"MoveDown2"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">OnKeyDown</span> <span class="attr">key</span>=<span class="string">"J"</span> <span class="attr">event</span>=<span class="string">"MoveLeft2"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">OnKeyDown</span> <span class="attr">key</span>=<span class="string">"L"</span> <span class="attr">event</span>=<span class="string">"MoveRight2"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">OnKeyPressed</span> <span class="attr">key</span>=<span class="string">"Enter"</span> <span class="attr">event</span>=<span class="string">"Shoot2"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Input</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">GameConfig</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Gameplay-Minute"><a href="#Gameplay-Minute" class="headerlink" title="Gameplay Minute"></a>Gameplay Minute</h3><h3 id="Runtime-Map-Reload"><a href="#Runtime-Map-Reload" class="headerlink" title="Runtime Map Reload"></a>Runtime Map Reload</h3><ul>
 <li>NOT a full reload</li>
 <li>Just overrides data (definitions &amp; game config)</li>
 </ul>
-<p><img src="/images/map_generation.gif" alt="Map Generation"></p>
+<!--<img src="/images/map_generation.gif" alt="" width="500px" />-->
 <h3 id="Event-System"><a href="#Event-System" class="headerlink" title="Event System"></a>Event System</h3><ul>
-<li><p>Supported events</p>
+<li><p>Support events</p>
 <ul>
 <li>OnOverlapBegin</li>
 <li>OnOverlapStay</li>
 <li>OnOverlapEnd</li>
 <li>OnHit</li>
 <li>Died</li>
+<li>Custom Event (Defined in Data)</li>
 </ul>
 </li>
 <li><p>Compare entity pairs of last frame and this frame</p>
 <ul>
-<li>seperate OnHit and OnOverlap events</li>
+<li><p>seperate OnHit and OnOverlap events</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> ProtoState::CompareEntityPairList() &#123;</span><br><span class="line">    PROFILE_SCOPE_FUNTION();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span>&amp; it : m_hitCurrentFramePairs) &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">std</span>::find(m_hitLastFramePairs.begin(), m_hitLastFramePairs.end(), it) == m_hitLastFramePairs.end()) &#123;</span><br><span class="line">            <span class="comment">// trigger OnHit event</span></span><br><span class="line">            g_theEventSystem.Trigger(<span class="string">"OnHit"</span>, it.first, it.second);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span>&amp; currentIt : m_overlapCurrentFramePairs) &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">std</span>::find(m_overlapLastFramePairs.begin(), m_overlapLastFramePairs.end(), currentIt) == m_overlapLastFramePairs.end()) &#123;</span><br><span class="line">            <span class="comment">// trigger OnOverlapBegin event</span></span><br><span class="line">            g_theEventSystem.Trigger(<span class="string">"OnOverlapBegin"</span>, currentIt.first, currentIt.second);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="comment">// trigger OnOverlapStay event</span></span><br><span class="line">            g_theEventSystem.Trigger(<span class="string">"OnOverlapStay"</span>, currentIt.first, currentIt.second);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span>&amp; lastIt : m_overlapLastFramePairs) &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">std</span>::find(m_overlapCurrentFramePairs.begin(), m_overlapCurrentFramePairs.end(), lastIt) == m_overlapCurrentFramePairs.end()) &#123;</span><br><span class="line">            <span class="comment">// trigger OnOverlapEnd event</span></span><br><span class="line">            g_theEventSystem.Trigger(<span class="string">"OnOverlapEnd"</span>, lastIt.first, lastIt.second);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    m_overlapLastFramePairs = m_overlapCurrentFramePairs;</span><br><span class="line">    m_hitLastFramePairs = m_hitCurrentFramePairs;</span><br><span class="line"></span><br><span class="line">    m_overlapCurrentFramePairs.clear();</span><br><span class="line">    m_hitCurrentFramePairs.clear();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 </li>
 <li><p>Overload Triggers</p>
@@ -235,7 +252,11 @@ ga('send', 'pageview');
 </li>
 </ul>
 <h3 id="Command-System"><a href="#Command-System" class="headerlink" title="Command System"></a>Command System</h3><ul>
-<li>Supported commands<ul>
+<li>String-based, takes the Command PropertySet as input</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Execute</span><span class="params">(PropertySet* commandNode, Entity* self, Entity* other = <span class="literal">nullptr</span>)</span></span>;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Support commands<ul>
 <li>AddMovement</li>
 <li>Destroy</li>
 <li>Damage</li>
@@ -244,14 +265,22 @@ ga('send', 'pageview');
 </ul>
 </li>
 </ul>
-<h3 id="Post-Mortem"><a href="#Post-Mortem" class="headerlink" title="Post-Mortem"></a>Post-Mortem</h3><ul>
-<li>Lots of potentials</li>
-<li>Thanks to git!</li>
-<li>Debugging is HARD!!! 80% of Time</li>
+<h3 id="Gameplay-Minute-1"><a href="#Gameplay-Minute-1" class="headerlink" title="Gameplay Minute"></a>Gameplay Minute</h3><h3 id="Post-Mortem"><a href="#Post-Mortem" class="headerlink" title="Post-Mortem"></a>Post-Mortem</h3><ul>
+<li><p>Soft Takeaways</p>
+<ul>
+<li>Trello for task schedule</li>
+<li>Debugging is HARD! Spent 80% of time debugging!</li>
 <li>No debug system to visualize entities’ current stats</li>
-<li>Tiles are batched but entities are not</li>
-<li>the way to organized entities</li>
-<li>No enough time for playtest</li>
+<li>Thanks to Git</li>
+</ul>
+</li>
+<li><p>Hard Takeaways</p>
+<ul>
+<li>The way to organize entities: pointer vs. scoped object</li>
+<li>Design around the data, ie. Property Tree</li>
+<li>Modern C++ skills got practiced such as smart pointers, move semantics, RAII, RTTI, variadic templates, rvalue references, deeper understanding of how std library containers work</li>
+</ul>
+</li>
 </ul>
 
         </div>
@@ -260,7 +289,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://ruixie.site/2018/07/16/DFS_GameBuilder/" data-id="cjjtbf6nb0000ushsbsmrsil7" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://ruixie.site/2018/07/16/DFS_GameBuilder/" data-id="cjjtn1l5i0000pghsy4rkuw02" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -396,6 +425,26 @@ ga('send', 'pageview');
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/2018/07/20/presentation/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2018/07/20/presentation/" class="title"></a></p>
+                            <p class="item-date"><time datetime="2018-07-20T07:15:31.941Z" itemprop="datePublished">2018-07-20</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/2018/07/19/UE4_InerstellarRacingLeague/" class="thumbnail">
     
     
@@ -459,7 +508,7 @@ ga('send', 'pageview');
                             <a href="/2018/07/16/DFS_GameBuilder/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/map_generation.gif)" alt="Data-Driven GameBuilder 2D" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/DFS_PropertyTree.png)" alt="Data-Driven GameBuilder 2D" class="thumbnail-image"></span>
     
     
 </a>

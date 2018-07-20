@@ -10,14 +10,19 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta property="og:type" content="website">
+        <meta name="keywords" content="" />
+    
+    <meta name="description" content="Hi there! I’m Siri and now I’m going to give a presentation on my Direct Focused Study project.I was doing a 2D data-driven game builder that can be used to author many 2D game types easily from XML d">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Rui &quot;Siri&quot; Xie">
-<meta property="og:url" content="http://ruixie.site/pages/resume.html">
+<meta property="og:url" content="http://ruixie.site/2018/07/20/presentation/index.html">
 <meta property="og:site_name" content="Rui &quot;Siri&quot; Xie">
+<meta property="og:description" content="Hi there! I’m Siri and now I’m going to give a presentation on my Direct Focused Study project.I was doing a 2D data-driven game builder that can be used to author many 2D game types easily from XML d">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-07-20T06:04:49.592Z">
+<meta property="og:updated_time" content="2018-07-20T09:16:44.320Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Rui &quot;Siri&quot; Xie">
+<meta name="twitter:description" content="Hi there! I’m Siri and now I’m going to give a presentation on my Direct Focused Study project.I was doing a 2D data-driven game builder that can be used to author many 2D game types easily from XML d">
     
 
     
@@ -145,23 +150,35 @@ ga('send', 'pageview');
                         <div class="main-body-header">
     <h1 class="header">
     
-    Rui "Siri" Xie
+    uncategorized
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="page-" class="article article-single article-type-page" itemscope itemprop="blogPost">
+                            <article id="post-presentation" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2018/07/20/presentation/" class="article-date">
+            <time datetime="2018-07-20T07:15:31.941Z" itemprop="datePublished">2018-07-20</time>
+        </a>
+    </div>
+
+                
+            </div>
+        
         
         <div class="article-entry" itemprop="articleBody">
-            
-
-	<div class="row">
-    <embed src="/pages/RuiXie_Resume.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
+            <p>Hi there! I’m Siri and now I’m going to give a presentation on my Direct Focused Study project.<br>I was doing a 2D data-driven game builder that can be used to author many 2D game types easily from XML data files.<br>And I’ll walk through each feature that I implemented.</p>
+<p>First, I’m gonna introduce the property tree data structure I designed literally for storing off the data in entities.<br>Ok, let’s take a look at the xml files. It looks pretty messy at a glance. But comparing the xml nodes to the property tree, you’ll see EntityDefinition is a propertyset, and the attributes under it are propeties …<br>So far it looks pretty like a tree structure.</p>
+<p>The propertySet can be generated, copied, deleted recursively as I’m using unique pointers to hold its children.<br>The constructor takes an xml node as input, and look for all the attributes and children nodes. If it finds any children nodes, the AddChild method will construct a new propertySet and parent it to the current one.</p>
+<p>The benefit of using unique pointers here is that it represents the ownership of the parent-children hierarchy. When the propertySet goes out of scope, all the children are going to die and delete the children of children recursively. No memory leaks! That’s nice.</p>
+<p>After we load in the entityDefinition files, we might want to create an entity, which holds a copy of the property tree. Then the copy constructor will perfectly gets the job done.</p>
+<p>As for the property class, each property holds the value as string which can be parsed to the type I want.</p>
+<p>Alright, now lets see how does the GameBuilder work with data</p>
+<p>When the game starts, it’ll Load 3 definition files: EntityDefinition, MapDefinition, TileDefinition into the memory for later use.</p>
 
         </div>
         <footer class="article-footer">
@@ -169,7 +186,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://ruixie.site/pages/resume.html" data-id="cjjtn1l7s000tpghsnnvknq0j" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://ruixie.site/2018/07/20/presentation/" data-id="cjjtnh4vf000upghsg6g4e8pl" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -272,6 +289,19 @@ ga('send', 'pageview');
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2018/07/19/UE4_InerstellarRacingLeague/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Interstellar Racing League</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
