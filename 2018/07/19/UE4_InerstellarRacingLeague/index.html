@@ -12,19 +12,19 @@
     
         <meta name="keywords" content="UE4" />
     
-    <meta name="description" content="Interstellar Racing League is a high-speed, 4 player racing experience. Players are racing along gravity-defying tracks through alien planets to compete for the title of the Galaxy’s Best Racer. Game">
+    <meta name="description" content="Interstellar Racing League is a high-speed, 4 player racing experience. Players are racing along gravity-defying tracks through alien planets to compete for the title of the Galaxy’s Best Racer. Over">
 <meta name="keywords" content="UE4">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Interstellar Racing League">
 <meta property="og:url" content="http://ruixie.site/2018/07/19/UE4_InerstellarRacingLeague/index.html">
 <meta property="og:site_name" content="Rui &quot;Siri&quot; Xie">
-<meta property="og:description" content="Interstellar Racing League is a high-speed, 4 player racing experience. Players are racing along gravity-defying tracks through alien planets to compete for the title of the Galaxy’s Best Racer. Game">
+<meta property="og:description" content="Interstellar Racing League is a high-speed, 4 player racing experience. Players are racing along gravity-defying tracks through alien planets to compete for the title of the Galaxy’s Best Racer. Over">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://7xtifo.com1.z0.glb.clouddn.com/IRL_Trailer.gif">
-<meta property="og:updated_time" content="2018-07-19T23:03:04.287Z">
+<meta property="og:updated_time" content="2018-07-20T21:16:36.230Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Interstellar Racing League">
-<meta name="twitter:description" content="Interstellar Racing League is a high-speed, 4 player racing experience. Players are racing along gravity-defying tracks through alien planets to compete for the title of the Galaxy’s Best Racer. Game">
+<meta name="twitter:description" content="Interstellar Racing League is a high-speed, 4 player racing experience. Players are racing along gravity-defying tracks through alien planets to compete for the title of the Galaxy’s Best Racer. Over">
 <meta name="twitter:image" content="http://7xtifo.com1.z0.glb.clouddn.com/IRL_Trailer.gif">
     
 
@@ -77,7 +77,7 @@ ga('send', 'pageview');
                     </h1>
                     
                         <h2 class="subtitle-wrap">
-                            <p class="subtitle">Greetings! I am Siri, a gameplay programmer pursuing my master&#39;s degree at SMU Guildhall</p>
+                            <p class="subtitle">Siri | Gameplay Programmer</p>
                         </h2>
                     
                 </div>
@@ -191,8 +191,6 @@ ga('send', 'pageview');
         <div class="article-entry" itemprop="articleBody">
             <p><img src="/images/IRL_Logo.png" alt="" width="500px"></p>
 <p><strong>Interstellar Racing League</strong> is a high-speed, 4 player racing experience. Players are racing along gravity-defying tracks through alien planets to compete for the title of the Galaxy’s Best Racer.</p>
-<h2 id="Game-Trailer"><a href="#Game-Trailer" class="headerlink" title="Game Trailer"></a>Game Trailer</h2><iframe width="854" height="480" src="https://www.youtube.com/embed/yuvkqC0l2d8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen><br></iframe>
-
 <h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><ul>
 <li><strong>Role</strong>: Physics Programmer</li>
 <li><strong>Engine</strong>: Unreal Engine 4.17</li>
@@ -201,6 +199,8 @@ ga('send', 'pageview');
 <li><strong>Team Size</strong>: 56 (15 programmers)</li>
 <li><strong>Download</strong>: <a href="https://drive.google.com/open?id=1ROjZ6IiELFV2dUu476RSc2SR843RJhKJ" target="_blank" rel="noopener">PC(Windows)</a></li>
 </ul>
+<h2 id="Game-Trailer"><a href="#Game-Trailer" class="headerlink" title="Game Trailer"></a>Game Trailer</h2><p align="center"><iframe width="854" height="480" src="https://www.youtube.com/embed/yuvkqC0l2d8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen><br></iframe></p>
+
 <h2 id="Physics-Model"><a href="#Physics-Model" class="headerlink" title="Physics Model"></a>Physics Model</h2><h3 id="First-Approach"><a href="#First-Approach" class="headerlink" title="First Approach"></a>First Approach</h3><p>The first version of the physics model was inspired by a tutorial video created by <a href="https://www.youtube.com/watch?v=LG1CtlFRmpU" target="_blank" rel="noopener">Space Dust Racing UE4 Arcade Vehicle Physics Tour</a>, in which it introduced the implementation of a basic 4-point hover car physics.</p>
 <p><img src="http://7xtifo.com1.z0.glb.clouddn.com/IRL_FA_Vehicle.gif" alt="" width="700px"><br><img src="/images/IRL_FirstApproach.png" alt="" width="700px"><br><img src="/images/IRL_FirstAp_Structure.png" alt="Vehicle Blueprint Settings" width="600px"></p>
 <p>In this approach, we:</p>
@@ -226,7 +226,8 @@ ga('send', 'pageview');
 <li>X-axis represents the hover height, and the intersection point is the height we want the vehicle to be stable at.</li>
 <li>Y-axis represents the up force value we apply to the vehicle. Also we clamp the value to prevent applying an infinite larget force when x-&gt;0 and x-&gt;∞.</li>
 </ul>
-<iframe width="700px" height="400px" src="https://www.desmos.com/calculator/icms4od9m2?embed" style="border: 1px solid #ccc" frameborder="0"></iframe>
+<p><img src="/images/IRL_FunctionGraph.png" alt="" width="700px"></p>
+<p align="center"><iframe width="700px" height="400px" src="https://www.desmos.com/calculator/icms4od9m2?embed" style="border: 1px solid #ccc" frameborder="0"></iframe></p>
 
 <h4 id="Stability-Component"><a href="#Stability-Component" class="headerlink" title="Stability Component"></a>Stability Component</h4><ul>
 <li>Calculate the falldown force according to the steepness of the track that the vehicle is driving on</li>
@@ -248,7 +249,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://ruixie.site/2018/07/19/UE4_InerstellarRacingLeague/" data-id="cjju4sjal0009qkhsmr7lbbs2" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://ruixie.site/2018/07/19/UE4_InerstellarRacingLeague/" data-id="cjjud0a360006sghsafdazyxp" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -443,7 +444,7 @@ ga('send', 'pageview');
                             <a href="/2018/07/16/DFS_GameBuilder/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/DFS_PropertyTree.png)" alt="Data-Driven GameBuilder 2D" class="thumbnail-image"></span>
+        <span style="background-image:url(http://7xtifo.com1.z0.glb.clouddn.com/map_generation.gif)" alt="Data-Driven GameBuilder 2D" class="thumbnail-image"></span>
     
     
 </a>
