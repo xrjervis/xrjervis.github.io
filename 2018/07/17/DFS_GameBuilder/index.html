@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    
+
+    
+    <title>Data-Driven GameBuilder 2D | Rui &#34;Siri&#34; Xie</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="C++" />
+    
+    <meta name="description" content="A 2D data-driven game builder that can be used to author many 2D game types easily from XML data files. Overview Engine: Personal Engine Languages: C++, XML Dev Time: 8 weeks Code Repo: Github  Proper">
+<meta name="keywords" content="C++">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Data-Driven GameBuilder 2D">
+<meta property="og:url" content="http://ruixie.site/2018/07/17/DFS_GameBuilder/index.html">
+<meta property="og:site_name" content="Rui &quot;Siri&quot; Xie">
+<meta property="og:description" content="A 2D data-driven game builder that can be used to author many 2D game types easily from XML data files. Overview Engine: Personal Engine Languages: C++, XML Dev Time: 8 weeks Code Repo: Github  Proper">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://7xtifo.com1.z0.glb.clouddn.com/map_generation.gif">
+<meta property="og:updated_time" content="2018-07-20T19:27:54.552Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Data-Driven GameBuilder 2D">
+<meta name="twitter:description" content="A 2D data-driven game builder that can be used to author many 2D game types easily from XML data files. Overview Engine: Personal Engine Languages: C++, XML Dev Time: 8 weeks Code Repo: Github  Proper">
+<meta name="twitter:image" content="http://7xtifo.com1.z0.glb.clouddn.com/map_generation.gif">
+    
+
+    
+
+    
+        <link rel="icon" href="/css/images/logo.png" />
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-92194454-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+    
+    
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">Siri | Gameplay Programmer</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/pages/about.html">About</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Indiviual-Projects/">Indiviual Projects</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Indiviual-Projects/Personal-Engine/">Personal Engine</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Team-Projects/">Team Projects</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Team-Projects/Unity/">Unity</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Team-Projects/Unreal-Engine-4/">Unreal Engine 4</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/pages/RuiXie_Resume.pdf">Resume</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Indiviual-Projects/">Indiviual Projects</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Indiviual-Projects/Personal-Engine/">Personal Engine</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-DFS_GameBuilder" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Data-Driven GameBuilder 2D
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2018/07/17/DFS_GameBuilder/" class="article-date">
+            <time datetime="2018-07-16T22:55:23.000Z" itemprop="datePublished">2018-07-17</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/C/">C++</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p>A 2D data-driven game builder that can be used to author many 2D game types easily from XML data files.</p>
+<h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><ul>
+<li><strong>Engine</strong>: Personal Engine</li>
+<li><strong>Languages</strong>: C++, XML</li>
+<li><strong>Dev Time</strong>: 8 weeks</li>
+<li><strong>Code Repo</strong>: <a href="&quot;https://github.com/xrjervis/guildhall/tree/master/DFS/GameBuilder&quot;">Github</a></li>
+</ul>
+<h3 id="Property-Tree"><a href="#Property-Tree" class="headerlink" title="Property Tree"></a>Property Tree</h3><p>Here is an example of an EntityDefinition XML node:<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">EntityDefinition</span></span></span><br><span class="line"><span class="tag">    <span class="attr">name</span>=<span class="string">"PlayerTank"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">spriteSheet</span>=<span class="string">"PlayerTank_1x1"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">spriteCoords</span>=<span class="string">"0,0"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">tags</span>=<span class="string">"canWalk,friend,player"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">collider</span>=<span class="string">"Disc2"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">size</span>=<span class="string">"1.5,1.5"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">health</span>=<span class="string">"10"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">speed</span>=<span class="string">"2"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Event</span> <span class="attr">type</span>=<span class="string">"MoveUp"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Command</span> <span class="attr">name</span>=<span class="string">"AddMovement"</span> <span class="attr">value</span>=<span class="string">"0.0,1.0"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Event</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Event</span> <span class="attr">type</span>=<span class="string">"MoveDown"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Command</span> <span class="attr">name</span>=<span class="string">"AddMovement"</span> <span class="attr">value</span>=<span class="string">"0.0,-1.0"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Event</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Event</span> <span class="attr">type</span>=<span class="string">"MoveLeft"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Command</span> <span class="attr">name</span>=<span class="string">"AddMovement"</span> <span class="attr">value</span>=<span class="string">"-1.0,0.0"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Event</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Event</span> <span class="attr">type</span>=<span class="string">"MoveRight"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Command</span> <span class="attr">name</span>=<span class="string">"AddMovement"</span> <span class="attr">value</span>=<span class="string">"1.0,0.0"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Event</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Event</span> <span class="attr">type</span>=<span class="string">"Shoot"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Command</span> <span class="attr">name</span>=<span class="string">"SpawnEntity"</span> <span class="attr">target</span>=<span class="string">"self"</span> <span class="attr">value</span>=<span class="string">"PlayerBullet"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Event</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Event</span> <span class="attr">type</span>=<span class="string">"Jump"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Command</span> <span class="attr">name</span>=<span class="string">"SetVelocity"</span> <span class="attr">value</span>=<span class="string">"0.0,5.0"</span> <span class="attr">setTimer</span>=<span class="string">"2.0"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Event</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">EntityDefinition</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><img src="/images/DFS_PropertyTree.png" alt="" width="700px"></p>
+<ul>
+<li>Generate, copy, delete recursively, no memory leaks!</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// PropertySet members</span></span><br><span class="line">StringId                                    m_id;</span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">vector</span>&lt;Property&gt;                       m_properties;</span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="built_in">std</span>::<span class="built_in">unique_ptr</span>&lt;PropertySet&gt;&gt;   m_children;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Constructor</span></span><br><span class="line">PropertySet::PropertySet(<span class="keyword">const</span> pugi::xml_node&amp; xmlNode) &#123;</span><br><span class="line">    m_id = CreateOrGetStringId(<span class="built_in">std</span>::<span class="built_in">string</span>(xmlNode.name()));</span><br><span class="line">    <span class="keyword">for</span> (pugi::xml_attribute attribute : xmlNode.attributes()) &#123;</span><br><span class="line">    	SetProperty(attribute.name(), attribute.as_string());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">size_t</span> nodeCount = <span class="built_in">std</span>::distance(xmlNode.children().begin(), xmlNode.children().end());</span><br><span class="line">    <span class="keyword">if</span> (nodeCount &gt; <span class="number">0</span>) &#123;</span><br><span class="line">    	<span class="keyword">for</span> (pugi::xml_node child : xmlNode.children()) &#123;</span><br><span class="line">    		AddChild(child);</span><br><span class="line">    	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>EntityDefinition loads data from XML. When we create an entity, it holds a copy</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Copy Constructor</span></span><br><span class="line">PropertySet::PropertySet(<span class="keyword">const</span> PropertySet&amp; copy) &#123;</span><br><span class="line">    m_id = copy.m_id;</span><br><span class="line">    m_properties = copy.m_properties;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span>&amp; it : copy.m_children) &#123;</span><br><span class="line">    	m_children.emplace_back(<span class="built_in">std</span>::make_unique&lt;PropertySet&gt;(*it));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Property object holds the value as a string which can be parsed to the type I want</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Property</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	Property() = <span class="keyword">default</span>;</span><br><span class="line">	Property(<span class="keyword">const</span> <span class="built_in">std</span>::<span class="built_in">string</span>&amp; name, <span class="keyword">const</span> <span class="built_in">std</span>::<span class="built_in">string</span>&amp; val);</span><br><span class="line">	~Property() = <span class="keyword">default</span>;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">std</span>::<span class="function"><span class="built_in">string</span>     <span class="title">GetName</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line">	<span class="function">StringI         <span class="title">GetID</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line">	<span class="function"><span class="keyword">bool</span>            <span class="title">IsValid</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">bool</span>            <span class="title">AsBool</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line">	<span class="function"><span class="keyword">float</span>           <span class="title">AsFloat</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line">	<span class="function"><span class="keyword">int</span>             <span class="title">AsInt</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line">	<span class="function">Vector2         <span class="title">AsVec2</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line">	<span class="function">IntVector2      <span class="title">AsIntVec2</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line">	<span class="function">Rgba            <span class="title">AsRgba</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line">	<span class="function">Tags            <span class="title">AsTags</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line">	<span class="built_in">std</span>::<span class="function"><span class="built_in">string</span>     <span class="title">AsString</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line">	<span class="function"><span class="keyword">const</span> <span class="keyword">char</span>*     <span class="title">AsRawString</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line">	<span class="function">eEventType      <span class="title">AsEventType</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">void</span>            <span class="title">SetValue</span><span class="params">(<span class="keyword">const</span> <span class="built_in">std</span>::<span class="built_in">string</span>&amp; val)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	StringId        m_id;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">string</span>     m_value;</span><br><span class="line">	<span class="keyword">bool</span>            m_isVaild = <span class="literal">false</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="How-does-the-GameBuilder-work-with-data"><a href="#How-does-the-GameBuilder-work-with-data" class="headerlink" title="How does the GameBuilder work with data?"></a>How does the GameBuilder work with data?</h3><ul>
+<li><p>When the game starts</p>
+<ul>
+<li>Load 3 definition files: EntityDefinition, MapDefinition, TileDefinition</li>
+<li><p>Load GameConfig file which contains global data, resource path and input mapping</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">GameConfig</span></span></span><br><span class="line"><span class="tag">    <span class="attr">cameraHeight</span>=<span class="string">"12.0"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">cameraAspect</span>=<span class="string">"1.7778"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">cameraClamp</span>=<span class="string">"true"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">cameraFollowPlayers</span>=<span class="string">"false"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">gravity</span>=<span class="string">"0.0,0.0"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">startMap</span>=<span class="string">"Dungeon"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Resources</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">SpriteSheet</span> <span class="attr">name</span>=<span class="string">"Bat_8x6"</span> <span class="attr">filePath</span>=<span class="string">"Data/Images/Bat_8x6.png"</span> <span class="attr">layout</span>=<span class="string">"8,6"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">SpriteSheet</span> <span class="attr">name</span>=<span class="string">"Terrain_32x32"</span> <span class="attr">filePath</span>=<span class="string">"Data/Images/Terrain_32x32.png"</span> <span class="attr">layout</span>=<span class="string">"32,32"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">SpriteSheet</span> <span class="attr">name</span>=<span class="string">"PlayerTank_1x1"</span> <span class="attr">filePath</span>=<span class="string">"Data/Images/PlayerTank_1x1.png"</span> <span class="attr">layout</span>=<span class="string">"1,1"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">SpriteSheet</span> <span class="attr">name</span>=<span class="string">"EnemyTank_1x1"</span> <span class="attr">filePath</span>=<span class="string">"Data/Images/EnemyTank_1x1.png"</span> <span class="attr">layout</span>=<span class="string">"1,1"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">SpriteSheet</span> <span class="attr">name</span>=<span class="string">"Characters_12x53"</span> <span class="attr">filePath</span>=<span class="string">"Data/Images/KushnariovaCharacters_12x53.png"</span> <span class="attr">layout</span>=<span class="string">"12,53"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">SpriteSheet</span> <span class="attr">name</span>=<span class="string">"Bullet_1x1"</span> <span class="attr">filePath</span>=<span class="string">"Data/Images/Bullet_1x1.png"</span> <span class="attr">layout</span>=<span class="string">"1,1"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Resources</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Input</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">OnKeyDown</span> <span class="attr">key</span>=<span class="string">"W"</span> <span class="attr">event</span>=<span class="string">"MoveUp"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">OnKeyDown</span> <span class="attr">key</span>=<span class="string">"S"</span> <span class="attr">event</span>=<span class="string">"MoveDown"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">OnKeyDown</span> <span class="attr">key</span>=<span class="string">"A"</span> <span class="attr">event</span>=<span class="string">"MoveLeft"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">OnKeyDown</span> <span class="attr">key</span>=<span class="string">"D"</span> <span class="attr">event</span>=<span class="string">"MoveRight"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">OnKeyPressed</span> <span class="attr">key</span>=<span class="string">"Space"</span> <span class="attr">event</span>=<span class="string">"Shoot"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">OnKeyDown</span> <span class="attr">key</span>=<span class="string">"I"</span> <span class="attr">event</span>=<span class="string">"MoveUp2"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">OnKeyDown</span> <span class="attr">key</span>=<span class="string">"K"</span> <span class="attr">event</span>=<span class="string">"MoveDown2"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">OnKeyDown</span> <span class="attr">key</span>=<span class="string">"J"</span> <span class="attr">event</span>=<span class="string">"MoveLeft2"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">OnKeyDown</span> <span class="attr">key</span>=<span class="string">"L"</span> <span class="attr">event</span>=<span class="string">"MoveRight2"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">OnKeyPressed</span> <span class="attr">key</span>=<span class="string">"Enter"</span> <span class="attr">event</span>=<span class="string">"Shoot2"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Input</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">GameConfig</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Runtime-Map-Reload"><a href="#Runtime-Map-Reload" class="headerlink" title="Runtime Map Reload"></a>Runtime Map Reload</h3><ul>
+<li>NOT a full reload</li>
+<li>Just overrides data (definitions &amp; game config)</li>
+</ul>
+<h3 id="Event-System"><a href="#Event-System" class="headerlink" title="Event System"></a>Event System</h3><ul>
+<li><p>Support events</p>
+<ul>
+<li>OnOverlapBegin</li>
+<li>OnOverlapStay</li>
+<li>OnOverlapEnd</li>
+<li>OnHit</li>
+<li>Died</li>
+<li>Custom Event (Defined in Data)</li>
+</ul>
+</li>
+<li><p>Compare entity pairs of last frame and this frame</p>
+<ul>
+<li><p>seperate OnHit and OnOverlap events</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> ProtoState::CompareEntityPairList() &#123;</span><br><span class="line">    PROFILE_SCOPE_FUNTION();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span>&amp; it : m_hitCurrentFramePairs) &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">std</span>::find(m_hitLastFramePairs.begin(), m_hitLastFramePairs.end(), it) == m_hitLastFramePairs.end()) &#123;</span><br><span class="line">            <span class="comment">// trigger OnHit event</span></span><br><span class="line">            g_theEventSystem.Trigger(<span class="string">"OnHit"</span>, it.first, it.second);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span>&amp; currentIt : m_overlapCurrentFramePairs) &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">std</span>::find(m_overlapLastFramePairs.begin(), m_overlapLastFramePairs.end(), currentIt) == m_overlapLastFramePairs.end()) &#123;</span><br><span class="line">            <span class="comment">// trigger OnOverlapBegin event</span></span><br><span class="line">            g_theEventSystem.Trigger(<span class="string">"OnOverlapBegin"</span>, currentIt.first, currentIt.second);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="comment">// trigger OnOverlapStay event</span></span><br><span class="line">            g_theEventSystem.Trigger(<span class="string">"OnOverlapStay"</span>, currentIt.first, currentIt.second);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span>&amp; lastIt : m_overlapLastFramePairs) &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">std</span>::find(m_overlapCurrentFramePairs.begin(), m_overlapCurrentFramePairs.end(), lastIt) == m_overlapCurrentFramePairs.end()) &#123;</span><br><span class="line">            <span class="comment">// trigger OnOverlapEnd event</span></span><br><span class="line">            g_theEventSystem.Trigger(<span class="string">"OnOverlapEnd"</span>, lastIt.first, lastIt.second);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    m_overlapLastFramePairs = m_overlapCurrentFramePairs;</span><br><span class="line">    m_hitLastFramePairs = m_hitCurrentFramePairs;</span><br><span class="line"></span><br><span class="line">    m_overlapCurrentFramePairs.clear();</span><br><span class="line">    m_hitCurrentFramePairs.clear();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>Overload Triggers</p>
+<ul>
+<li>Trigger events on entity pairs &lt;self, other&gt;</li>
+<li>Trigger events on certain entity</li>
+<li>Trigger events on all entities (broadcast)</li>
+</ul>
+</li>
+</ul>
+<h3 id="Command-System"><a href="#Command-System" class="headerlink" title="Command System"></a>Command System</h3><ul>
+<li>String-based, takes the Command PropertySet as input</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Execute</span><span class="params">(PropertySet* commandNode, Entity* self, Entity* other = <span class="literal">nullptr</span>)</span></span>;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Support commands<ul>
+<li>AddMovement</li>
+<li>Destroy</li>
+<li>Damage</li>
+<li>SetOrientation</li>
+<li>SpawnEntity</li>
+</ul>
+</li>
+</ul>
+<h3 id="Gameplay-Minute"><a href="#Gameplay-Minute" class="headerlink" title="Gameplay Minute"></a>Gameplay Minute</h3><h3 id="Post-Mortem"><a href="#Post-Mortem" class="headerlink" title="Post-Mortem"></a>Post-Mortem</h3><ul>
+<li><p>Soft Takeaways</p>
+<ul>
+<li>Trello for task schedule</li>
+<li>Debugging is HARD! Spent 80% of time debugging!</li>
+<li>No debug system to visualize entities’ current stats</li>
+<li>Thanks to Git</li>
+</ul>
+</li>
+<li><p>Hard Takeaways</p>
+<ul>
+<li>The way to organize entities: pointer vs. scoped object</li>
+<li>Design around the data, ie. Property Tree</li>
+<li>Modern C++ skills got practiced such as smart pointers, move semantics, RAII, RTTI, variadic templates, rvalue references, deeper understanding of how std library containers work</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://ruixie.site/2018/07/17/DFS_GameBuilder/" data-id="cjjuw74vz0005hchsqtjmgcno" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <!--<aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="at" href="mailto:ruix@smu.edu" target="_blank" rel="noopener">
+                        <i class="icon fa fa-at"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin" href="https://www.linkedin.com/in/ruixsiri/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-linkedin"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/xrjervis/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2018/07/18/Personal_RayXEngine/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            RayX Engine
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/07/20/UE4_InerstellarRacingLeague/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://7xtifo.com1.z0.glb.clouddn.com/IRL_Trailer.gif)" alt="Interstellar Racing League" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Team-Projects/">Team Projects</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Team-Projects/Unreal-Engine-4/">Unreal Engine 4</a></p>
+                            <p class="item-title"><a href="/2018/07/20/UE4_InerstellarRacingLeague/" class="title">Interstellar Racing League</a></p>
+                            <p class="item-date"><time datetime="2018-07-19T22:55:23.000Z" itemprop="datePublished">2018-07-20</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/07/19/Unity_FelineFriendshipForce/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://7xtifo.com1.z0.glb.clouddn.com/FFF_Trailer.gif)" alt="Feline Friendship Force" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Team-Projects/">Team Projects</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Team-Projects/Unity/">Unity</a></p>
+                            <p class="item-title"><a href="/2018/07/19/Unity_FelineFriendshipForce/" class="title">Feline Friendship Force</a></p>
+                            <p class="item-date"><time datetime="2018-07-18T22:55:23.000Z" itemprop="datePublished">2018-07-19</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/07/18/Personal_RayXEngine/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/Engine_Logo.png)" alt="RayX Engine" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Indiviual-Projects/">Indiviual Projects</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Indiviual-Projects/Personal-Engine/">Personal Engine</a></p>
+                            <p class="item-title"><a href="/2018/07/18/Personal_RayXEngine/" class="title">RayX Engine</a></p>
+                            <p class="item-date"><time datetime="2018-07-17T22:55:23.000Z" itemprop="datePublished">2018-07-18</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/07/17/DFS_GameBuilder/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://7xtifo.com1.z0.glb.clouddn.com/map_generation.gif)" alt="Data-Driven GameBuilder 2D" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Indiviual-Projects/">Indiviual Projects</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Indiviual-Projects/Personal-Engine/">Personal Engine</a></p>
+                            <p class="item-title"><a href="/2018/07/17/DFS_GameBuilder/" class="title">Data-Driven GameBuilder 2D</a></p>
+                            <p class="item-date"><time datetime="2018-07-16T22:55:23.000Z" itemprop="datePublished">2018-07-17</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Indiviual-Projects/">Indiviual Projects</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Indiviual-Projects/Personal-Engine/">Personal Engine</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Team-Projects/">Team Projects</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Team-Projects/Unity/">Unity</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Team-Projects/Unreal-Engine-4/">Unreal Engine 4</a><span class="category-list-count">1</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UE4/">UE4</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UNITY/">UNITY</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+-->
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2018 Rui Xie</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>.</p>
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
